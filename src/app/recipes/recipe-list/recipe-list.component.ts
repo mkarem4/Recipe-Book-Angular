@@ -10,6 +10,8 @@ export class RecipeListComponent implements OnInit {
   @Output() recipeWasSelected = new EventEmitter<RecipeModel>();
   recipes: RecipeModel[] = [
     // tslint:disable-next-line:max-line-length
+    new RecipeModel('Konafa with Mango', 'This Konafa with Mango is delicious and amazing.', 'http://www.cairowestmag.com/wp-content/uploads/2018/09/Mango-konafa.jpg'),
+    // tslint:disable-next-line:max-line-length
     new RecipeModel('Harissa-crumbed fish with lentils & peppers', 'This smoky cod dish makes a great midweek meal – it\'s quick, low calorie and made in just one pan, which saves on washing up ', 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2018/11/harissa-crumbed-fish-with-lentils-peppers.jpg?itok=2OuC_rVk'),
     // tslint:disable-next-line:max-line-length
     new RecipeModel('Sausage, kale & gnocchi one-pot', 'Plate up this delicious one-pot of sausage, kale and gnocchi in just 20 minutes, with just five minutes prep. Midweek suppers never got so easy – or tasty!', 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2018/10/sausage-kale-gnocchi-one-pot.jpg?itok=4syTcwru'),
