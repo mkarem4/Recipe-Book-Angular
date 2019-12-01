@@ -10,8 +10,9 @@ import {RecipeItemComponent} from './recipes/recipe-list/recipe-item/recipe-item
 import {ShoppingListComponent} from './shopping-list/shopping-list.component';
 import {ShoppingEditComponent} from './shopping-list/shopping-edit/shopping-edit.component';
 import {FormsModule} from '@angular/forms';
-import { DropdownDirective } from './shared/dropdown.directive';
-import { FooterComponent } from './footer/footer.component';
+import {DropdownDirective} from './shared/dropdown.directive';
+import {FooterComponent} from './footer/footer.component';
+import {ShoppingListService} from './shopping-list/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
