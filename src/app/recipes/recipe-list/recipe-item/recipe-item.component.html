@@ -1,6 +1,8 @@
 <!-- Bootstrap card -->
 <div class="card" style="width: 22.5rem;">
-  <img class="card-img-top" [src]="recipe.imagePath" [alt]="recipe.name">
+  <a [routerLink]="[index]" routerLinkActive="active">
+    <img class="card-img-top" [src]="recipe.imagePath" [alt]="recipe.name">
+  </a>
   <!--src="http://propeller.in/assets/images/profile-pic.png" alt="Card image cap"-->
 
   <!-- Card Body -->
@@ -12,6 +14,7 @@
     <p class="card-text">{{ recipe.description }}</p>
 
     <!-- Card Action -->
-    <a href="#" class="btn btn-primary" (click)="onSelected()">Get Recipe Details</a>
+    <a class="btn btn-success" [routerLink]="[index]" routerLinkActive="active">Get Recipe Details</a>
   </div>
 </div>
+<br>
