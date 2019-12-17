@@ -3,7 +3,8 @@
     <app-shopping-edit></app-shopping-edit>
     <hr>
     <ul class="group-list">
-      <a *ngFor="let ingredient of ingredients" class="list-group-item" href="" style="cursor: pointer">
+      <a *ngFor="let ingredient of ingredients; let i = index" (click)="onEditItem(i)" class="list-group-item"
+         style="cursor: pointer">
         {{ ingredient.name }} ({{ingredient.amount}})
       </a>
     </ul>
