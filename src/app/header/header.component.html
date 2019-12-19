@@ -1,43 +1,23 @@
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="http://placehold.it/150x50?text=Logo" alt="">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-          <a class="nav-link" routerLink="recipes">Recipe
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-          <a class="nav-link" routerLink="/shopping-list">Shopping List</a>
-        </li>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a routerLink="/" class="navbar-brand">Recipe Book</a>
+    </div>
 
-        <li class="nav-item dropdown float-right" appDropdown routerLinkActive="active">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-             aria-haspopup="true" aria-expanded="false">
-            Manage
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" >Save Data</a>
-            <a class="dropdown-item" >Fetch Data</a>
-          </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a routerLink="/recipes">Recipes</a></li>
+        <li routerLinkActive="active"><a routerLink="/shopping-list">Shopping List</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" appDropdown>
+          <a style="cursor: pointer;" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a style="cursor: pointer;">Save Data</a></li>
+            <li><a style="cursor: pointer;">Fetch Data</a></li>
+          </ul>
         </li>
-
       </ul>
     </div>
   </div>
 </nav>
-
-<!-- Page Content -->
-<div class="container">
-  <h1 class="mt-4">Recipes Book </h1>
-  <p>This is a demo with Angular 8</p>
-</div>
-<!-- /.container -->

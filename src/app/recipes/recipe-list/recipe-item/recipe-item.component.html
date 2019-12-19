@@ -1,20 +1,17 @@
-<!-- Bootstrap card -->
-<div class="card" style="width: 22.5rem;">
-  <a [routerLink]="[index]" routerLinkActive="active">
-    <img class="card-img-top" [src]="recipe.imagePath" [alt]="recipe.name">
-  </a>
-  <!--src="http://propeller.in/assets/images/profile-pic.png" alt="Card image cap"-->
-
-  <!-- Card Body -->
-  <div class="card-body">
-    <!-- Card Title -->
-    <h2 class="card-title">{{ recipe.name }}</h2>
-
-    <!-- Card Text -->
-    <p class="card-text">{{ recipe.description }}</p>
-
-    <!-- Card Action -->
-    <a class="btn btn-success" [routerLink]="[index]" routerLinkActive="active">Get Recipe Details</a>
+<a
+  style="cursor: pointer;"
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  class="list-group-item clearfix">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+    <p class="list-group-item-text">{{ recipe.description }}</p>
   </div>
-</div>
-<br>
+  <span class="pull-right">
+        <img
+          [src]="recipe.imagePath"
+          alt="{{ recipe.name }}"
+          class="img-responsive"
+          style="max-height: 50px;">
+      </span>
+</a>
